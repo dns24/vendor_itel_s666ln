@@ -1,0 +1,11 @@
+on boot
+    chown root system /sys/pnpmgr/ams/foreground
+    chmod 0664 /sys/pnpmgr/ams/foreground
+    chown root system /sys/pnpmgr/ams/foreground_list
+    chmod 0664 /sys/pnpmgr/ams/foreground_list
+    chown root system /sys/pnpmgr/ams/usage
+    chmod 0664 /sys/pnpmgr/ams/usage
+
+    mkdir /dev/cpuctl/pnpmgr_bg
+    mkdir /dev/cpuctl/pnpmgr_fg
+    
