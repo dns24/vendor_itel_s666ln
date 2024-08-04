@@ -795,7 +795,6 @@ PRODUCT_COPY_FILES += \
     vendor/itel/s666ln/proprietary/vendor/data/camera/model/sky_sunshine.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/sky_sunshine.jpg \
     vendor/itel/s666ln/proprietary/vendor/data/camera/model/sky_sunshine2.jpg:$(TARGET_COPY_OUT_VENDOR)/data/camera/model/sky_sunshine2.jpg \
     vendor/itel/s666ln/proprietary/vendor/data/camera/morpho/morpho_calibration_video.bin:$(TARGET_COPY_OUT_VENDOR)/data/camera/morpho/morpho_calibration_video.bin \
-    vendor/itel/s666ln/proprietary/vendor/data/camera/vidhance/vidhance.lic:$(TARGET_COPY_OUT_VENDOR)/data/camera/vidhance/vidhance.lic \
     vendor/itel/s666ln/proprietary/vendor/data/camera/vidhance/vidhance_calibration:$(TARGET_COPY_OUT_VENDOR)/data/camera/vidhance/vidhance_calibration \
     vendor/itel/s666ln/proprietary/vendor/data/camera/watermark/watermark_1280x720.nv21:$(TARGET_COPY_OUT_VENDOR)/data/camera/watermark/watermark_1280x720.nv21 \
     vendor/itel/s666ln/proprietary/vendor/data/camera/watermark/watermark_1280x720.yuyv:$(TARGET_COPY_OUT_VENDOR)/data/camera/watermark/watermark_1280x720.yuyv \
@@ -978,7 +977,6 @@ PRODUCT_COPY_FILES += \
     vendor/itel/s666ln/proprietary/vendor/etc/dts/current_usb44k:$(TARGET_COPY_OUT_VENDOR)/etc/dts/current_usb44k \
     vendor/itel/s666ln/proprietary/vendor/etc/dts/current_usb48k:$(TARGET_COPY_OUT_VENDOR)/etc/dts/current_usb48k \
     vendor/itel/s666ln/proprietary/vendor/etc/dts/customer.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/dts/customer.cfg \
-    vendor/itel/s666ln/proprietary/vendor/etc/dts/dts-eagle.lic:$(TARGET_COPY_OUT_VENDOR)/etc/dts/dts-eagle.lic \
     vendor/itel/s666ln/proprietary/vendor/etc/dts/dts_audio_settings:$(TARGET_COPY_OUT_VENDOR)/etc/dts/dts_audio_settings \
     vendor/itel/s666ln/proprietary/vendor/etc/dts/games_accessory44:$(TARGET_COPY_OUT_VENDOR)/etc/dts/games_accessory44 \
     vendor/itel/s666ln/proprietary/vendor/etc/dts/games_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/games_accessory48 \
