@@ -7,39 +7,15 @@ soong_namespace {
 	],
 }
 
-cc_prebuilt_library_shared {
-	name: "libwvhidl",
+android_app_import {
+	name: "EngineerMode",
 	owner: "itel",
-	strip: {
-		none: true,
+	apk: "proprietary/app/EngineerMode/EngineerMode.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
 	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libwvhidl.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libwvdrmengine",
-	owner: "itel",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/mediadrm/libwvdrmengine.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	relative_install_path: "mediadrm",
-	prefer: true,
-	soc_specific: true,
+	privileged: true,
 }
 
 android_app_import {
@@ -51,6 +27,12 @@ android_app_import {
 		enabled: false,
 	},
 	privileged: true,
+}
+
+dex_import {
+	name: "com.android.hotwordenrollment.common.util",
+	owner: "itel",
+	jars: ["proprietary/framework/com.android.hotwordenrollment.common.util.jar"],
 }
 
 dex_import {
@@ -99,13 +81,6 @@ dex_import {
 	name: "mediatek-telephony-common",
 	owner: "itel",
 	jars: ["proprietary/framework/mediatek-telephony-common.jar"],
-}
-
-dex_import {
-	name: "com.android.hotwordenrollment.common.util",
-	owner: "itel",
-	jars: ["proprietary/system_ext/framework/com.android.hotwordenrollment.common.util.jar"],
-	system_ext_specific: true,
 }
 
 prebuilt_etc_xml {
@@ -267,6 +242,41 @@ prebuilt_etc_xml {
 	src: "proprietary/vendor/etc/vintf/manifest/vendor.transsion.hardware.trancam.trancamserver@1.0.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libwvhidl",
+	owner: "itel",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libwvhidl.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libwvdrmengine",
+	owner: "itel",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/mediadrm/libwvdrmengine.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	relative_install_path: "mediadrm",
+	prefer: true,
 	soc_specific: true,
 }
 
