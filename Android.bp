@@ -10,7 +10,7 @@ soong_namespace {
 android_app_import {
 	name: "EngineerMode",
 	owner: "itel",
-	apk: "proprietary/app/EngineerMode/EngineerMode.apk",
+	apk: "proprietary/priv-app/EngineerMode/EngineerMode.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
