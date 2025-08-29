@@ -6,7 +6,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/itel/S666LN
 
 PRODUCT_COPY_FILES += \
-    vendor/itel/S666LN/proprietary/system_ext/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.vtservice.rc \
     vendor/itel/S666LN/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.drbin \
     vendor/itel/S666LN/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.tlbin \
     vendor/itel/S666LN/proprietary/vendor/app/mcRegistry/031c0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/031c0000000000000000000000000000.drbin \
@@ -710,7 +709,6 @@ PRODUCT_COPY_FILES += \
     vendor/itel/S666LN/proprietary/vendor/etc/audio_param/preset_ringtone.bin:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/preset_ringtone.bin \
     vendor/itel/S666LN/proprietary/vendor/etc/audio_param/preset_voip.bin:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/preset_voip.bin \
     vendor/itel/S666LN/proprietary/vendor/etc/cam3atms_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cam3atms_profiles.xml \
-    vendor/itel/S666LN/proprietary/vendor/etc/dar_thermal_core/thermal_core_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/dar_thermal_core/thermal_core_config.json \
     vendor/itel/S666LN/proprietary/vendor/etc/ecc_list.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list.xml \
     vendor/itel/S666LN/proprietary/vendor/etc/ecc_list_OP01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP01.xml \
     vendor/itel/S666LN/proprietary/vendor/etc/ecc_list_OP02.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_OP02.xml \
@@ -760,7 +758,6 @@ PRODUCT_COPY_FILES += \
     vendor/itel/S666LN/proprietary/vendor/etc/init/init.volte_md_status.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_md_status.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/init.volte_stack.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_stack.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/init.volte_ua.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_ua.rc \
-    vendor/itel/S666LN/proprietary/vendor/etc/init/init.vtservice_hidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vtservice_hidl.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/init.wlan_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wlan_drv.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/init.wmt_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wmt_drv.rc \
     vendor/itel/S666LN/proprietary/vendor/etc/init/init.wod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wod.rc \
@@ -787,7 +784,6 @@ PRODUCT_COPY_FILES += \
     vendor/itel/S666LN/proprietary/vendor/etc/meow.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/meow.cfg \
     vendor/itel/S666LN/proprietary/vendor/etc/mtk_platform_codecs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_platform_codecs_config.xml \
     vendor/itel/S666LN/proprietary/vendor/etc/nnapi_powerhal.json:$(TARGET_COPY_OUT_VENDOR)/etc/nnapi_powerhal.json \
-    vendor/itel/S666LN/proprietary/vendor/etc/predthermallevel_rf.json:$(TARGET_COPY_OUT_VENDOR)/etc/predthermallevel_rf.json \
     vendor/itel/S666LN/proprietary/vendor/etc/slp_conf:$(TARGET_COPY_OUT_VENDOR)/etc/slp_conf \
     vendor/itel/S666LN/proprietary/vendor/etc/special_pws_channel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/special_pws_channel.xml \
     vendor/itel/S666LN/proprietary/vendor/etc/thermal/disable_skin_control.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/disable_skin_control.conf \
@@ -941,6 +937,7 @@ PRODUCT_PACKAGES += \
     libwo \
     arm.graphics-V1-ndk_platform \
     libmtk_drvb \
+    vendor.mediatek.hardware.videotelephony@1.0_vendor \
     libHEVCdec_sa.ca7.android \
     libh264dec_customize \
     libh264dec_sa.ca7 \
@@ -1001,7 +998,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.keymaster_attestation@1.1-impl \
     vendor.mediatek.hardware.mms@1.6-impl \
     vendor.mediatek.hardware.nvram@1.1-impl \
-    vendor.mediatek.hardware.videotelephony@1.0-impl \
     lib3a.ae.pipe \
     libCamera_hi5022qmipiraw_Boken_Capture \
     libCamera_hi5022qmipiraw_Capture_Zoom1 \
@@ -1803,37 +1799,12 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.pq@2.7 \
     vendor.mediatek.hardware.pq@2.8 \
     vendor.mediatek.hardware.pq@2.9 \
-    vendor.mediatek.hardware.videotelephony@1.0_vendor \
     vendor.transsion.hardware.trancam.trancamserver@1.0 \
     vendor.transsion.hardware.tranlog@1.0 \
     vendor.transsion.hardware.tranlogconfig@1.0 \
     vendor.trustonic.tee.tui@1.0 \
     vendor.trustonic.tee@1.0 \
     vendor.trustonic.tee@1.1 \
-    libcomutils \
-    libimsma \
-    libimsma_adapt \
-    libimsma_rtp \
-    libimsma_socketwrapper \
-    libmtk_vt_service \
-    libmtk_vt_wrapper \
-    libsignal \
-    libsink-mtk \
-    libsource \
-    libvcodec_cap \
-    libvcodec_capenc \
-    libvt_avsync \
-    vendor.mediatek.hardware.videotelephony-V1-ndk \
-    vendor.mediatek.hardware.videotelephony@1.0 \
-    ImsService \
-    mediatek-common \
-    mediatek-framework \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-ims-extension-plugin \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common \
     android.hardware.biometrics.fingerprint@2.1-service.xml \
     android.hardware.neuralnetworks-shim-service-mtk.xml \
     android.hardware.security.keymint-service.trustonic.xml \
@@ -1872,7 +1843,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.pq@2.2-service \
     vendor.transsion.hardware.trancam.trancamserver@1.0-service \
     vendor.trustonic.tee@1.1-service \
-    vtservice_hidl \
     kmsetkey_ca.trustonic \
     mcDriverDaemon \
     mnld \
@@ -1883,7 +1853,6 @@ PRODUCT_PACKAGES += \
     nvram_daemon \
     rcs_volte_stack \
     thermal_core \
-    thermal_intf \
     volte_clientapi_ua \
     volte_imcb \
     volte_imsm_93 \
@@ -1893,8 +1862,7 @@ PRODUCT_PACKAGES += \
     volte_ua \
     wlan_assistant \
     wmt_launcher \
-    wmt_loader \
-    vtservice
+    wmt_loader
 
 PRODUCT_PACKAGES += \
     vendor_bin_hw_android_hardware_graphics_allocator@4_0-service-mediatek \
@@ -1933,12 +1901,3 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libpq_cust_base_so \
     vendor_lib64_libpq_prot_so \
     vendor_lib64_libpqparamparser_so
-
-PRODUCT_BOOT_JARS += \
-    mediatek-common \
-    mediatek-framework \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common
