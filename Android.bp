@@ -11260,6 +11260,33 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libsmartcharging",
+    owner: "itel",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsmartcharging.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libspeech_enh_lib",
     owner: "itel",
     strip: {
@@ -26938,6 +26965,34 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "chg_sence",
+    owner: "itel",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/chg_sence",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "libnvram",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "fuelgauged",
     owner: "itel",
     target: {
@@ -27816,6 +27871,31 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "mtk_pkm_service",
+    owner: "itel",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/mtk_pkm_service",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "netdagent",
     owner: "itel",
     target: {
@@ -27900,6 +27980,33 @@ cc_prebuilt_binary {
         },
     },
     compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "smartcharging",
+    owner: "itel",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/smartcharging",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
     strip: {
         none: true,
     },
