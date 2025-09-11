@@ -1221,6 +1221,7 @@ PRODUCT_PACKAGES += \
     libcustom_nvram \
     libcvsd_mtk \
     libdecrypt \
+    libdynamiclog \
     libfgauge_gm30 \
     libfile_op \
     libforkexecwrap \
@@ -1253,10 +1254,12 @@ PRODUCT_PACKAGES += \
     libksensor \
     libmipc \
     libmml \
+    libmmprofile \
     libmnetlink_v104 \
     libmsbc_mtk \
     libmtk-fusion-ril-prop-vsim \
     libmtk-ril \
+    libmtk_bsg \
     libmtkares \
     libmtkcam_3rdparty.thread \
     libmtkcam_fdWarpConvert \
@@ -1852,6 +1855,7 @@ PRODUCT_PACKAGES += \
     kmsetkey_ca.trustonic \
     mcDriverDaemon \
     mnld \
+    mt6660_calibration \
     jpegtool \
     v3avpud.mt6789 \
     mtk_agpsd \
@@ -1859,6 +1863,7 @@ PRODUCT_PACKAGES += \
     netdagent \
     nvram_daemon \
     rcs_volte_stack \
+    rt5512_calibration \
     smartcharging \
     thermal_core \
     volte_clientapi_ua \

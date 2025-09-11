@@ -8767,6 +8767,32 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libdynamiclog",
+    owner: "itel",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libdynamiclog.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libfgauge_gm30",
     owner: "itel",
     strip: {
@@ -9703,6 +9729,32 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libmmprofile",
+    owner: "itel",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmmprofile.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libmnetlink_v104",
     owner: "itel",
     strip: {
@@ -9820,6 +9872,30 @@ cc_prebuilt_library_shared {
                 "libaedv",
                 "libbinder",
                 "libmipc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtk_bsg",
+    owner: "itel",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmtk_bsg.so",
+            ],
+            shared_libs: [
                 "libc++",
                 "libc",
                 "libm",
@@ -27780,6 +27856,30 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "mt6660_calibration",
+    owner: "itel",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/mt6660_calibration",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc",
+                "libdl",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "jpegtool",
     owner: "itel",
     target: {
@@ -27980,6 +28080,30 @@ cc_prebuilt_binary {
         },
     },
     compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "rt5512_calibration",
+    owner: "itel",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/rt5512_calibration",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc",
+                "libdl",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
     strip: {
         none: true,
     },
