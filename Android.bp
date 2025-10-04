@@ -11,6 +11,17 @@ soong_namespace {
     ],
 }
 
+android_app_import {
+	name: "EngineerMode",
+	owner: "itel",
+	apk: "proprietary/priv-app/EngineerMode/EngineerMode.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
 cc_prebuilt_library_shared {
     name: "AVCSecureVdecCA_510",
     owner: "itel",
@@ -1044,6 +1055,74 @@ cc_prebuilt_library_shared {
     relative_install_path: "mt6789",
     prefer: true,
     soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "vendor.mediatek.hardware.engineermode@1.0",
+	owner: "itel",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.mediatek.hardware.engineermode@1.0.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "vendor.mediatek.hardware.engineermode@1.1",
+	owner: "itel",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.mediatek.hardware.engineermode@1.1.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "vendor.mediatek.hardware.engineermode@1.2",
+	owner: "itel",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.mediatek.hardware.engineermode@1.2.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "vendor.mediatek.hardware.engineermode@1.3",
+	owner: "itel",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.mediatek.hardware.engineermode@1.3.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -27066,6 +27145,23 @@ cc_prebuilt_binary {
     },
     prefer: true,
     soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "em_hidl",
+	owner: "itel",
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/bin/em_hidl"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	soc_specific: true,
 }
 
 cc_prebuilt_binary {
